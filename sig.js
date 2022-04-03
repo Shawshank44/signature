@@ -5,7 +5,8 @@ const {
   } = require('crypto');
   
   const { privateKey, publicKey } = generateKeyPairSync('ec', {
-    namedCurve: 'sect239k1'
+    namedCurve: 'secp256k1'
+    // modulusLength : 570 for dsa
   });
   
   const sign = createSign('SHA256');
